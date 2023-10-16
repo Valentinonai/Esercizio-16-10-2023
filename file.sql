@@ -78,3 +78,11 @@ WHERE iva='20%'
 SELECT COUNT(*),SUM (importo)
 FROM fatture
 GROUP BY data_fattura
+
+
+------------ESERCIZIO 8----------------
+SELECT * 
+FROM prodotti 
+WHERE data_attivazione 
+LIKE '2017-%' 
+AND (in_produzione=true OR in_commercio=true)
