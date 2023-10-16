@@ -86,3 +86,9 @@ FROM prodotti
 WHERE data_attivazione 
 LIKE '2017-%' 
 AND (in_produzione=true OR in_commercio=true)
+
+---------ESERCIZIO 9------------------
+SELECT COUNT(EXTRACT(YEAR FROM data_fattura)),EXTRACT(YEAR FROM data_fattura) 
+FROM fatture
+WHERE iva='20%'
+GROUP BY EXTRACT(YEAR FROM data_fattura) 
