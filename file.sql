@@ -5,7 +5,7 @@ CREATE TABLE public."Clienti"
     numero_cliente serial NOT NULL,
     nome character varying(255) NOT NULL,
     cognome character varying(255) NOT NULL,
-    data_di_nascita date NOT NULL,
+    data_di_nascita character varying(255) NOT NULL,
     regione_residenza character varying(255) NOT NULL,
     PRIMARY KEY (numero_cliente)
 );
@@ -24,7 +24,7 @@ CREATE TABLE public."Fatture"
     importo double precision NOT NULL,
     iva int2vector NOT NULL,
     id_cliente serial NOT NULL,
-    data_fattura date NOT NULL,
+    data_fattura character varying(255) NOT NULL,
     numero_fornitore serial NOT NULL,
     PRIMARY KEY (numero_fattura)
 );
@@ -40,8 +40,8 @@ CREATE TABLE public."Prodotti"
     descrizione character varying(255) NOT NULL,
     in_produzione boolean NOT NULL,
     in_commercio boolean NOT NULL,
-    data_attivazione date NOT NULL,
-    data_disattivazione date,
+    data_attivazione character varying(255) NOT NULL,
+    data_disattivazione character varying(255),
     PRIMARY KEY (id_prodotto)
 );
 
