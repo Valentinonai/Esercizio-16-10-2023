@@ -88,10 +88,10 @@ LIKE '2017-%'
 AND (in_produzione=true OR in_commercio=true)
 
 ---------ESERCIZIO 9------------------
-SELECT COUNT(*),EXTRACT(YEAR FROM data_fattura) 
+SELECT COUNT(*),EXTRACT(YEAR FROM data_fattura) AS year
 FROM fatture
 WHERE iva='20%'
-GROUP BY EXTRACT(YEAR FROM data_fattura) 
+GROUP BY year 
 
 ---------ESERCIZIO 10-----------------------
 SELECT EXTRACT(YEAR FROM data_fattura),COUNT(*)
