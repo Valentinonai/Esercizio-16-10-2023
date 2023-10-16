@@ -15,3 +15,19 @@ ALTER TABLE IF EXISTS public."Clienti"
 
 
 -----------ESERCIZIO 2-----------------
+
+
+CREATE TABLE public."Fatture"
+(
+    numero_fattura serial NOT NULL,
+    tipologia character varying(255) NOT NULL,
+    importo double precision NOT NULL,
+    iva int2vector NOT NULL,
+    id_cliente serial NOT NULL,
+    data_fattura date NOT NULL,
+    numero_fornitore serial NOT NULL,
+    PRIMARY KEY (numero_fattura)
+);
+
+ALTER TABLE IF EXISTS public."Fatture"
+    OWNER to postgres;
