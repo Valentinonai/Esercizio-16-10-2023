@@ -94,10 +94,11 @@ WHERE iva='20%'
 GROUP BY EXTRACT(YEAR FROM data_fattura) 
 
 ---------ESERCIZIO 10-----------------------
-SELECT COUNT(tipologia),EXTRACT(YEAR FROM data_fattura)
+SELECT EXTRACT(YEAR FROM data_fattura),COUNT(*)
 FROM fatture
 WHERE tipologia='A'
-GROUP BY tipologia,EXTRACT(YEAR FROM data_fattura)
+GROUP BY EXTRACT(YEAR FROM data_fattura)
+HAVING COUNT(*)>1
 
 
 --------------ESERCIZIO 11------------------
