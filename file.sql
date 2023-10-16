@@ -92,3 +92,15 @@ SELECT COUNT(EXTRACT(YEAR FROM data_fattura)),EXTRACT(YEAR FROM data_fattura)
 FROM fatture
 WHERE iva='20%'
 GROUP BY EXTRACT(YEAR FROM data_fattura) 
+
+---------ESERCIZIO 10-----------------------
+SELECT COUNT(tipologia),EXTRACT(YEAR FROM data_fattura)
+FROM fatture
+WHERE tipologia='A'
+GROUP BY tipologia,EXTRACT(YEAR FROM data_fattura)
+
+
+--------------ESERCIZIO 11------------------
+SELECT numero_fattura,importo,iva,data_fattura,denominazione
+FROM fatture
+LEFT OUTER JOIN fornitori USING(numero_fornitore)
