@@ -60,3 +60,10 @@ CREATE TABLE public."Fornitori"
 
 ALTER TABLE IF EXISTS public."Fornitori"
     OWNER to postgres;
+
+
+-----------ESERCIZIO 5----------------
+SELECT nome,cognome 
+FROM clienti 
+WHERE data_di_nascita 
+LIKE '1982-%'
