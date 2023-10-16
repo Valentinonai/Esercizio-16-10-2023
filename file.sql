@@ -110,3 +110,9 @@ SELECT SUM(importo),regione_residenza
 FROM fatture
 JOIN clienti ON id_cliente=numero_cliente
 GROUP BY regione_residenza
+
+-------------ESERCIZIO 13----------------------
+SELECT COUNT(*)
+FROM clienti
+JOIN fatture ON numero_cliente=id_cliente
+WHERE EXTRACT(YEAR FROM data_di_nascita)=1980 AND importo>50
