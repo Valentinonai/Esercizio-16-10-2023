@@ -22,7 +22,7 @@ CREATE TABLE public."Fatture"
     numero_fattura serial NOT NULL,
     tipologia character varying(255) NOT NULL,
     importo double precision NOT NULL,
-    iva int2vector NOT NULL,
+    iva character varying(255) NOT NULL,
     id_cliente serial NOT NULL,
     data_fattura character varying(255) NOT NULL,
     numero_fornitore serial NOT NULL,
@@ -67,3 +67,8 @@ SELECT nome,cognome
 FROM clienti 
 WHERE data_di_nascita 
 LIKE '1982-%'
+
+------------ESERCIZIO 6------------------
+SELECT COUNT(*)
+FROM fatture
+WHERE iva='20%'
