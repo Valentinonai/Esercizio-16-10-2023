@@ -31,3 +31,19 @@ CREATE TABLE public."Fatture"
 
 ALTER TABLE IF EXISTS public."Fatture"
     OWNER to postgres;
+
+-------ESERCIZIO 3------------------
+
+CREATE TABLE public."Prodotti"
+(
+    id_prodotto serial NOT NULL,
+    descrizione character varying(255) NOT NULL,
+    in_produzione boolean NOT NULL,
+    in_commercio boolean NOT NULL,
+    data_attivazione date NOT NULL,
+    data_disattivazione date,
+    PRIMARY KEY (id_prodotto)
+);
+
+ALTER TABLE IF EXISTS public."Prodotti"
+    OWNER to postgres;
