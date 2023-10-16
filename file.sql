@@ -117,3 +117,8 @@ SELECT COUNT(DISTINCT numero_cliente)
 FROM clienti
 JOIN fatture ON numero_cliente=id_cliente
 WHERE EXTRACT(YEAR FROM data_di_nascita)=1980 AND importo>50
+
+------------------ESERCIZIO 14-------------------
+SELECT nome||'-'||cognome AS denominazione
+FROM clienti
+WHERE regione_residenza='italia'
