@@ -72,3 +72,9 @@ LIKE '1982-%'
 SELECT COUNT(*)
 FROM fatture
 WHERE iva='20%'
+
+
+-----------ESERCIZIO 7------------------
+SELECT COUNT(*),SUM (importo)
+FROM fatture
+GROUP BY data_fattura
