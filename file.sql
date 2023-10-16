@@ -47,3 +47,16 @@ CREATE TABLE public."Prodotti"
 
 ALTER TABLE IF EXISTS public."Prodotti"
     OWNER to postgres;
+
+
+----------ESERCIZIO 4---------------
+CREATE TABLE public."Fornitori"
+(
+    numero_fornitore serial NOT NULL,
+    denominazione character varying(255) NOT NULL,
+    regione_residenza character varying(255) NOT NULL,
+    PRIMARY KEY (numero_fornitore)
+);
+
+ALTER TABLE IF EXISTS public."Fornitori"
+    OWNER to postgres;
