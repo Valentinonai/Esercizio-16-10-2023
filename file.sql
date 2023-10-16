@@ -75,9 +75,9 @@ WHERE iva='20%'
 
 
 -----------ESERCIZIO 7------------------
-SELECT COUNT(*),SUM (importo)
+SELECT COUNT(*),SUM (importo) ,EXTRACT (YEAR FROM data_fattura)
 FROM fatture
-GROUP BY data_fattura
+GROUP BY EXTRACT (YEAR FROM data_fattura)
 
 
 ------------ESERCIZIO 8----------------
