@@ -104,3 +104,9 @@ GROUP BY tipologia,EXTRACT(YEAR FROM data_fattura)
 SELECT numero_fattura,importo,iva,data_fattura,denominazione
 FROM fatture
 LEFT OUTER JOIN fornitori USING(numero_fornitore)
+
+-------------ESERCIZIO 12--------------------
+SELECT SUM(importo),regione_residenza
+FROM fatture
+JOIN clienti ON id_cliente=numero_cliente
+GROUP BY regione_residenza
